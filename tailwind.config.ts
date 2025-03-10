@@ -10,10 +10,10 @@ const config: Config = {
   theme: {
   	extend: {
   		colors: {
-  			background: 'hsl(var(--background))',
-  			foreground: 'hsl(var(--foreground))',
+  			background: '#17191b',
+  			foreground: '#f3c629',
   			card: {
-  				DEFAULT: 'hsl(var(--card))',
+  				DEFAULT: '#FFFFFF',
   				foreground: 'hsl(var(--card-foreground))'
   			},
   			popover: {
@@ -30,7 +30,7 @@ const config: Config = {
   			},
   			muted: {
   				DEFAULT: 'hsl(var(--muted))',
-  				foreground: 'hsl(var(--muted-foreground))'
+  				foreground: '#FFFFFF'
   			},
   			accent: {
   				DEFAULT: 'hsl(var(--accent))',
@@ -51,6 +51,10 @@ const config: Config = {
   				'5': 'hsl(var(--chart-5))'
   			}
   		},
+		backgroundImage: {
+			'card-gradient': 'linear-gradient(135deg, #6A1B9A 0%, #0D47A1 100%)',
+			'card-gradient-2': 'linear-gradient(135deg, #6A1B9A 0%, #C37BBB, #0D47A1 100%)',
+		},
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',

@@ -16,8 +16,8 @@ interface CategoryProps {
 
 const CategoryCard: React.FC<CategoryProps> = ({ title, items, gridSpan }) => {
   return (
-    <Card className={`h-full ${gridSpan}`}>
-      <CardHeader>
+    <Card className={`bg-card-gradient h-full ${gridSpan}`}>
+      <CardHeader className="text-white">
         <CardTitle>{title}</CardTitle>
       </CardHeader>
       <CardContent>
@@ -27,7 +27,7 @@ const CategoryCard: React.FC<CategoryProps> = ({ title, items, gridSpan }) => {
           ) : (
             <ul className="space-y-2">
               {items.map((item, index) => (
-                <li key={index} className="bg-muted p-2 rounded-md">
+                <li key={index} className="bg-card-gradient-2 p-2 rounded-md text-black">
                   {Object.entries(item).map(([key, value]) => {
                     const formattedKey = key.split('_').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
                     let formattedValue = value;

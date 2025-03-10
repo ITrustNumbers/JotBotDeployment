@@ -164,7 +164,7 @@ const UploadAudio: React.FC<{ onUploadSuccess: () => void }> = ({ onUploadSucces
     isTranscribing;
 
   return (
-    <Card>
+    <Card className="bg-card-gradient text-white p-6 rounded-xl shadow-lg">
       <CardHeader>
         <CardTitle>Upload New Audio</CardTitle>
         <CardDescription>Select an audio file to transcribe</CardDescription>

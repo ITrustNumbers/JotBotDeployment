@@ -94,21 +94,21 @@ export default function MeetingDetails({ data }: MeetingDetailsProps) {
         <h1 className="text-3xl font-bold">{data.name}</h1>
         <button
           onClick={handleExport}
-          className="flex items-center px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+          className="bg-gradient-to-r from-[#6A1B9A] to-[#0D47A1] hover:from-[#FFF6B3] hover:to-[#F6C794] text-[#f3c629] hover:text-[#6A1B9A] flex items-center px-4 py-2 text-white rounded"
         >
           <Download className="w-5 h-5 mr-2" />
           Export as DOCX
         </button>
       </div>
       <p className="text-muted-foreground mb-6">{data.description}</p>
-      <Tabs defaultValue="summary" className="space-y-4">
+      <Tabs defaultValue="summary" className="space-y-4 text-black">
         <TabsList>
-          <TabsTrigger value="summary">Summary</TabsTrigger>
-          <TabsTrigger value="details">Details</TabsTrigger>
+          <TabsTrigger className="text-black" value="summary">Summary</TabsTrigger>
+          <TabsTrigger className="text-black" value="details">Details</TabsTrigger>
         </TabsList>
         <TabsContent value="summary">
           <div className="space-y-6">
-            <Card>
+            <Card className="bg-gradient-to-r from-[#6A1B9A] to-[#0D47A1] text-white">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <FileText className="w-5 h-5" />
@@ -119,7 +119,7 @@ export default function MeetingDetails({ data }: MeetingDetailsProps) {
                 <p>{data.summary}</p>
               </CardContent>
             </Card>
-            <Card>
+            <Card className="bg-gradient-to-r from-[#6A1B9A] to-[#0D47A1] text-white">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <FileText className="w-5 h-5" />
@@ -137,14 +137,14 @@ export default function MeetingDetails({ data }: MeetingDetailsProps) {
         <TabsContent value="details">
           <div className="grid grid-cols-4 gap-6">
             {categories.map((category, index) => (
-              <motion.div
+              <motion.div 
                 key={category.title}
                 className={category.gridSpan}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <CategoryCard
+                <CategoryCard 
                   title={category.title}
                   items={category.items}
                   gridSpan={category.gridSpan}

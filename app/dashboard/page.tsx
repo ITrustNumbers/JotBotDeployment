@@ -78,7 +78,7 @@ const Dashboard: React.FC = () => {
       </header>
       <main className="container mx-auto p-6 space-y-6">
         <UploadAudio onUploadSuccess={fetchMeetings} />
-        <Card>
+        <Card className="bg-card-gradient text-white p-6 rounded-xl shadow-lg">
           <CardHeader>
             <CardTitle>Previous Meetings</CardTitle>
             <CardDescription>Recent transcribed meetings</CardDescription>
